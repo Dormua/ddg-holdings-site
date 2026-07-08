@@ -72,22 +72,18 @@
 
         <div class="carousel-wrap" role="region" aria-label="Brand pipeline, scrollable">
           <ul class="carousel" id="carousel" tabindex="0">
-            <li class="carousel__slide carousel__slide--lime">
-              <svg class="carousel__art" viewBox="0 0 120 150" aria-hidden="true">
-                <path d="M46 30H74V48C74 48 90 60 90 78V128C90 135.732 83.732 142 76 142H44
-                         C36.268 142 30 135.732 30 128V78C30 60 46 48 46 48V30Z"/>
-                <rect x="50" y="14" width="20" height="16" rx="2"/>
-                <circle cx="60" cy="20" r="5"/>
-              </svg>
+            <li class="carousel__slide carousel__slide--lime carousel__slide--photo">
+              <img class="carousel__photo" src="assets/brand-01-product.jpg"
+                   alt="Brand 01 — foaming hand soap starter kit" loading="lazy">
               <p class="carousel__label-brand">Brand 01 — Personal care</p>
               <p class="carousel__label-status">Coming soon</p>
             </li>
 
-            <li class="carousel__slide">
-              <!-- TODO: replace this color block with real product photography once available -->
-              <div class="carousel__color-block carousel__color-block--a" aria-hidden="true"></div>
-              <p class="carousel__label-brand">Brand 02 — Home care</p>
-              <p class="carousel__label-status">In research</p>
+            <li class="carousel__slide carousel__slide--photo">
+              <img class="carousel__photo" src="assets/brand-02-product.jpg"
+                   alt="Brand 02 — daily deodorant concept in three colorways" loading="lazy">
+              <p class="carousel__label-brand">Brand 02 — Personal care</p>
+              <p class="carousel__label-status">Coming soon</p>
             </li>
 
             <li class="carousel__slide carousel__slide--type">
@@ -255,8 +251,7 @@
   <footer class="section footer" id="contact">
     <div class="container reveal-on-scroll">
       <p class="footer__line">Got a category that needs waking up? Talk to us.</p>
-      <!-- TODO: replace with real Zoho Mail address -->
-      <a class="footer__email" href="mailto:hello@ddgholdings.com">hello@ddgholdings.com</a>
+      <a class="footer__email" href="mailto:hello@ddg-brands.com">hello@ddg-brands.com</a>
       <p class="footer__fine-print">
         DDG Holdings · <span id="year"></span> ·
         <!-- TODO: add real LinkedIn href -->
