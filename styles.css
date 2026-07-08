@@ -287,27 +287,27 @@ button:focus-visible,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    /* content-driven height on mobile — 90svh was tuned for the desktop
+       two-column layout; stacked with the (now hidden) image, it left large
+       dead zones above/below it. Text + spacing now define the section's
+       height. padding-bottom falls back to the base var(--space-5) below —
+       zeroing it (an earlier attempt) left the button flush against the
+       forest strip's color change with no paper-colored breathing room at
+       all, unlike every other section-to-section transition on the page. */
+    min-height: auto;
+  }
+
   .hero__grid {
     grid-template-columns: 1fr;
   }
 
   .hero__visual {
-    /* the stretch relationship only makes sense in the two-column desktop
-       layout — reset to a plain width-driven square once stacked. */
-    align-self: auto;
-    width: 45%;
-    max-width: 220px;
-    margin-top: var(--space-4);
-  }
-
-  .hero__visual-photo {
-    /* height:auto is required here — the img's width/height HTML attributes
-       (for CLS prevention) map to explicit CSS sizing hints, so once
-       width:45% makes width definite, height was also already definite from
-       the attributes and aspect-ratio would have nothing left to resolve.
-       See founder__photo for the same fix with fuller explanation. */
-    height: auto;
-    aspect-ratio: 1 / 1;
+    /* hidden on mobile — the product photo's detail doesn't read at this
+       size, and the section is stronger ending on the thesis + button
+       than on a shrunken image. Real photography returns in the Pipeline
+       strip and Portfolio teaser right below. */
+    display: none;
   }
 }
 

@@ -95,11 +95,12 @@ two links just shrink. No logo image; the wordmark IS the logo for now.
   height. This is what makes the relationship between text and image
   deliberate instead of two independently-sized blocks that happen to be
   centered — see the visual-block note below for how this plays out.
-  On mobile (≤768px) this collapses to one column — visual block moves below
-  the text, at reduced size (~45%, max 220px wide), left-anchored (not
-  centered — the asymmetric rule still applies to this block); the stretch
-  relationship is reset (`align-self: auto`) since it only makes sense
-  two-column.
+  On mobile (≤768px) this collapses to one column and the visual block is
+  hidden entirely (`display: none`) — at a shrunken size the product photo's
+  detail didn't read, and a full-width treatment left the hero fighting the
+  thesis for attention with dead space around it either way. The section
+  ends on the thesis + button; real product photography returns immediately
+  after in the Pipeline strip and again in the Portfolio teaser.
 - Left column — eyebrow line first: mono, uppercase, letter-spaced,
   `--text-label`, sage: `CONSUMER BRANDS FOR THE MIDDLE EAST`
 - Then the thesis in `--font-display` at `--text-hero`
