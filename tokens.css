@@ -1,0 +1,112 @@
+/* ============================================================
+   DDG HOLDINGS — Design Tokens (v2, green palette)
+   Single source of truth. Every color, font, and spacing value
+   in the project must come from these variables. No raw hex
+   values anywhere else in the codebase.
+   ============================================================ */
+
+:root {
+
+  /* ---------- Palette (6 colors, never more) ---------- */
+
+  --color-paper:  #F7F8F2;  /* page background, faint green cast — the 60% */
+  --color-lime:   #DFEBB4;  /* alternating sections, tags, highlights — the 30% */
+  --color-forest: #1F5427;  /* BRAND color — buttons, footer, founder letter bg */
+  --color-leaf:   #4CA23F;  /* live accent — use sparingly (see rules) */
+  --color-ink:    #1A1A17;  /* primary text */
+  --color-sage:   #5E6657;  /* secondary text, captions */
+
+  /* Derived tints (the only exceptions to the 6-color rule) */
+  --color-lime-soft: #EFF5D9;  /* lime @ ~50% on paper: subtle card fills */
+  --color-line:      #E3E6D8;  /* hairline borders on paper */
+  --color-forest-up: #2A6B34;  /* forest hover state */
+
+  /* ---------- Semantic aliases (use these in components) ---------- */
+
+  --bg-page:        var(--color-paper);
+  --bg-section-alt: var(--color-lime);
+  --bg-inverse:     var(--color-forest); /* footer / founder-letter block */
+
+  --text-primary:    var(--color-ink);
+  --text-secondary:  var(--color-sage);
+  --text-on-inverse: var(--color-paper);
+  --text-accent:     var(--color-leaf);  /* one word in hero, links hover */
+
+  --border-default: var(--color-line);
+
+  --btn-bg:       var(--color-forest);
+  --btn-text:     var(--color-paper);
+  --btn-bg-hover: var(--color-forest-up);
+
+  --tag-bg:   var(--color-lime);
+  --tag-text: var(--color-forest);       /* forest on lime — high contrast pair */
+
+  /* ---------- Typography ---------- */
+  /* Google Fonts:
+     https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap */
+
+  --font-display: 'Instrument Serif', Georgia, serif;    /* hero, section titles */
+  --font-body:    'Karla', 'Helvetica Neue', sans-serif; /* everything else */
+  --font-mono:    'IBM Plex Mono', monospace;            /* numbers, labels, eyebrows */
+
+  /* Type scale (fluid: mobile -> desktop) */
+  --text-hero:  clamp(3rem, 9vw, 7rem);   /* the thesis line — large but tuned to balance against the hero image column */
+  --text-h2:    clamp(2rem, 4vw, 3.25rem);
+  --text-h3:    clamp(1.25rem, 2vw, 1.5rem);
+  --text-body:  1.125rem;                      /* 18px */
+  --text-small: 0.9375rem;                     /* 15px */
+  --text-label: 0.8125rem;                     /* 13px — mono, letter-spaced */
+
+  --leading-tight: 1.05;   /* hero */
+  --leading-head:  1.2;
+  --leading-body:  1.65;
+
+  --tracking-label: 0.12em; /* uppercase mono eyebrows */
+
+  /* ---------- Spacing & layout ---------- */
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 7rem;      /* between sections — generous, Tiny-style air */
+
+  --container-max: 1200px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+
+  --radius-card: 20px;  /* soft, consumer feel */
+  --radius-tag:  999px; /* pills */
+  --radius-btn:  12px;
+}
+
+/* ============================================================
+   USAGE RULES (read before writing any component)
+
+   1. 60/30/10 — Paper dominates. Lime creates rhythm
+      (alternating sections, tags). Forest/Leaf/Ink are the
+      last 10%.
+
+   2. Forest is the brand color: buttons, footer background,
+      founder-letter block, tag text. Light text (Paper) sits
+      on it. It carries the "serious holdings" weight.
+
+   3. Leaf appears in AT MOST these places on the page:
+      - one highlighted word in the hero headline
+      - link underlines / hover states
+      - the "Coming soon" tag accent on the portfolio teaser
+      Never as a button background. Never as large fills.
+
+   4. Text sits only on Paper, Lime, or Forest:
+      - on Paper/Lime  -> Ink (primary) or Sage (secondary)
+      - on Lime tags   -> Forest
+      - on Forest      -> Paper
+      Never place text on Leaf directly.
+
+   5. Buttons are always Forest with Paper text. No other
+      button colors exist.
+
+   6. Display font (Instrument Serif) only for hero + h2.
+      Mono only for labels, numbers, and eyebrows — uppercase,
+      letter-spaced. Body font for everything else.
+   ============================================================ */

@@ -1,0 +1,10 @@
+# Raw source assets — not needed in version control, already processed into /assets
+Images/
+Founders images/
+
+# Separate app, not part of this site — deploy independently if needed
+ceo-taskboard/
+
+# OS cruft
+.DS_Store
+Thumbs.db
