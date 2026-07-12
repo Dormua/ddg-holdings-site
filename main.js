@@ -39,7 +39,7 @@
 
   // Section reveal-on-scroll (fade + rise), once each, skipped if reduced motion
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var revealTargets = document.querySelectorAll('.reveal-on-scroll, .teaser__visual');
+  var revealTargets = document.querySelectorAll('.reveal-on-scroll');
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
     revealTargets.forEach(function (el) {

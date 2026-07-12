@@ -224,13 +224,16 @@ two links just shrink. No logo image; the wordmark IS the logo for now.
   scroll strip of small mixed-style placeholders, not a static grid — it
   reads as a different pattern, not a repeat of this one.)
 - Inside, left: tag pill `COMING SOON` (`--tag-bg`/`--tag-text`, mono,
-  uppercase); brand-line: `Brand 01 — Personal care`; one teaser sentence:
+  uppercase); brand-line: `CLEAN — Personal care`; one teaser sentence:
   `A foaming hand soap that ships as a tablet. The bottle you already own,
-  refilled without the plastic.` Do NOT reveal a brand name.
-- Inside, right: an abstract product visual built in pure CSS/SVG — a simple
-  bottle silhouette (inline SVG, forest stroke) with a small tablet circle
-  dropping into it on scroll-into-view (one-time animation, 700ms, ease-out,
-  reduced-motion safe). No image files. This is the page's one playful moment.
+  refilled without the plastic.` (Revised: the brand name is now revealed here,
+  matching the hero visual and real product photography added elsewhere on the
+  page — the earlier "stay generic" rule assumed no real photography existed
+  yet.)
+- Inside, right: the real product photo (`assets/brand-01-product.jpg`),
+  `--radius-card`, `object-fit: cover`, `aspect-ratio: 1/1`, max-width 220px.
+  Replaces the earlier abstract SVG bottle placeholder now that real product
+  photography exists — no SVG, no tablet-drop animation.
 - Below the panel, one mono line, sage: `Brands 02–05 in research.`
 
 ### 6. Who we are — full-bleed forest block
