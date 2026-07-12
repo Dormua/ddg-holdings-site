@@ -259,11 +259,15 @@ two links just shrink. No logo image; the wordmark IS the logo for now.
   refuse to compromise on, what a manufacturing partner can expect
   (long-term, quality-obsessed, direct).
 - **Signature row** below the letter: 3 slots side by side
-  (`grid-template-columns: repeat(3, 1fr)`, stacking to 1 column ≤768px) —
-  Dor Muallem, Gal Razon, Dor Netz. Each name in italic display font at
-  `--text-h3` (a handwritten-style placeholder) with `Co-founder` in mono,
-  lime-colored (sage isn't valid on forest per tokens.css rule 4), beneath.
-  TODO comment per slot: replace with a real signature SVG.
+  (`grid-template-columns: repeat(3, 1fr)`, staying 3-across at every width
+  down to 360px — tighter `--space-2` gap and `--text-small` name size
+  below 768px keep each name on one line; an earlier version collapsed to a
+  single stacked column on mobile, but that read as disconnected rather than
+  a shared signature block) — Dor Muallem, Gal Razon, Dor Netz. Each name in
+  italic display font at `--text-h3` (`--text-small` ≤768px) (a
+  handwritten-style placeholder) with `Co-founder` in mono, lime-colored
+  (sage isn't valid on forest per tokens.css rule 4), beneath. TODO comment
+  per slot: replace with a real signature SVG.
 - A hairline divider (`--color-paper` — `--border-default` is tuned for
   paper and disappears on forest, same fix already used for the pipeline
   section's typography cards).

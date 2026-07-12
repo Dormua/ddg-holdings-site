@@ -786,7 +786,11 @@ button:focus-visible,
 
 @media (max-width: 768px) {
   .founder__signatures {
-    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .founder__signature-name {
+    font-size: var(--text-small);
   }
 
   .founder__cards {
