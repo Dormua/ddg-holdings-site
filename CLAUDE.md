@@ -195,7 +195,7 @@ two links just shrink. No logo image; the wordmark IS the logo for now.
 - Two short paragraphs, 7-column width, left-anchored. Copy direction: most
   categories in the region are run by a handful of incumbents who haven't
   touched their product or branding in years — that's not a red flag, it's
-  proof the demand is already proven; [N] years of experience building and
+  proof the demand is already proven; 5 years of experience building and
   repositioning consumer brands is what it takes to walk in and give people
   a reason to switch.
 
@@ -217,24 +217,38 @@ two links just shrink. No logo image; the wordmark IS the logo for now.
   sustainability in honestly where it fits (product quality pillar).
 
 ### 5. Portfolio — the teaser
-- Eyebrow: `03 — WHAT`.
-- One wide teaser panel — the one full-width card-style element on the page:
-  `--radius-card`, background paper, hairline border, generous padding. (The
-  Pipeline section's cards also use `--radius-card`, but as a horizontal
-  scroll strip of small mixed-style placeholders, not a static grid — it
-  reads as a different pattern, not a repeat of this one.)
-- Inside, left: tag pill `COMING SOON` (`--tag-bg`/`--tag-text`, mono,
+- Eyebrow: `03 — WHAT`. Heading: `What we're launching first.` (plural — the
+  section now covers two brands, not one; revised from the earlier singular
+  `The first brand.` once SHIFT photography was added alongside CLEAN.)
+- Two stacked wide teaser panels (`.teaser-list`, `gap: var(--space-4)`), one
+  per brand, each the same full-width card style: `--radius-card`, background
+  paper, hairline border, generous padding. (The Pipeline section's cards
+  also use `--radius-card`, but as a horizontal scroll strip of small
+  mixed-style placeholders, not a static grid — it reads as a different
+  pattern, not a repeat of this one.)
+- Card 1 — CLEAN: tag pill `COMING SOON` (`--tag-bg`/`--tag-text`, mono,
   uppercase); brand-line: `CLEAN — Personal care`; one teaser sentence:
   `A foaming hand soap that ships as a tablet. The bottle you already own,
-  refilled without the plastic.` (Revised: the brand name is now revealed here,
-  matching the hero visual and real product photography added elsewhere on the
-  page — the earlier "stay generic" rule assumed no real photography existed
-  yet.)
-- Inside, right: the real product photo (`assets/brand-01-product.jpg`),
-  `--radius-card`, `object-fit: cover`, `aspect-ratio: 1/1`, max-width 220px.
-  Replaces the earlier abstract SVG bottle placeholder now that real product
-  photography exists — no SVG, no tablet-drop animation.
-- Below the panel, one mono line, sage: `Brands 02–05 in research.`
+  refilled without the plastic.` Brand names are revealed here, matching the
+  hero visual and real product photography — the earlier "stay generic" rule
+  assumed no real photography existed yet. Photo: `assets/brand-01-product.jpg`.
+- Card 2 — SHIFT: same structure, tag `COMING SOON`, brand-line:
+  `SHIFT — Personal care`; sentence: `A daily deodorant for sensitive skin,
+  in three colors worth leaving out on the counter.` Photo:
+  `assets/brand-02-product.jpg`.
+- Each card's photo (`.teaser__photo`): `--radius-card`, `object-fit: cover`,
+  `aspect-ratio: 1/1`, max-width 220px, sitting right of the copy on desktop
+  (`align-items: center` on the card). Replaces the earlier abstract SVG
+  bottle placeholder now that real product photography exists — no SVG, no
+  tablet-drop animation.
+  - Mobile (≤768px): the photo bleeds full-width to the card's top edge
+    (negative margin equal to the card's own padding, `align-self: stretch`,
+    top corners keep `--radius-card`, bottom corners square) instead of
+    sitting small and left-aligned above the copy — a small fixed-width photo
+    read as disconnected from the card around it; full-bleed reads as one
+    unit.
+- Below the panels, one mono line, sage: `Brands 03–05 in research.` (CLEAN
+  and SHIFT are both now shown above, so the "in research" count starts at 03.)
 
 ### 6. Who we are — full-bleed forest block
 - Full-bleed `--bg-inverse`, text `--text-on-inverse`.

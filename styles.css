@@ -167,11 +167,6 @@ button:focus-visible,
   color: var(--text-secondary);
 }
 
-.todo-inline {
-  font-family: var(--font-mono);
-  color: var(--color-leaf);
-}
-
 /* ---------- Nav ---------- */
 
 .nav {
@@ -643,6 +638,13 @@ button:focus-visible,
 
 /* ---------- Portfolio teaser ---------- */
 
+.teaser-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
 .teaser {
   display: flex;
   gap: var(--space-5);
@@ -651,7 +653,6 @@ button:focus-visible,
   border: 1px solid var(--border-default);
   border-radius: var(--radius-card);
   padding: var(--space-5);
-  margin-top: var(--space-5);
 }
 
 .teaser__copy {
@@ -833,7 +834,14 @@ button:focus-visible,
 
   .teaser__visual {
     order: -1;
-    max-width: 120px;
+    align-self: stretch;
+    margin: calc(var(--space-4) * -1) calc(var(--space-4) * -1) 0;
+  }
+
+  .teaser__photo {
+    max-width: none;
+    width: 100%;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
   }
 
   .pillar {
